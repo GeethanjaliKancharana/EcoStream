@@ -1,0 +1,423 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f7f3;
+  color: #263b30;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  background: #218653;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #17683f;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Login page */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #e5f3e9, #f5faf6);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 42px 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(30, 80, 50, 0.10);
+  text-align: center;
+}
+
+.login-card h1 {
+  color: #17683f;
+  margin: 12px 0;
+}
+
+.login-card p {
+  color: #718078;
+  margin-bottom: 24px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #d9e5dc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #218653;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Dashboard layout */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #155c3c;
+  color: white;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.side-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #b8d8c5;
+  margin-bottom: 8px;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  background: transparent;
+  color: #e8f5ec;
+  padding: 13px;
+  border-radius: 8px;
+}
+
+.sidebar button:hover {
+  background: #287b52;
+  transform: none;
+}
+
+.sidebar .logout {
+  margin-top: auto;
+  background: #a13c3c;
+}
+
+.sidebar .logout:hover {
+  background: #852c2c;
+}
+
+/* Main content */
+
+.main-content {
+  flex: 1;
+  padding: 30px 38px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 15px rgba(30, 80, 50, 0.05);
+}
+
+.topbar h2 {
+  color: #155c3c;
+  margin-bottom: 5px;
+}
+
+.topbar p {
+  color: #718078;
+  font-size: 14px;
+}
+
+/* Welcome section */
+
+.welcome {
+  background: linear-gradient(120deg, #17683f, #36a56b);
+  color: white;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  margin-bottom: 20px;
+  color: #e5f6eb;
+}
+
+.welcome button {
+  background: white;
+  color: #17683f;
+}
+
+.welcome button:hover {
+  background: #e8f5ec;
+}
+
+/* Statistics */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stats div {
+  background: white;
+  padding: 25px;
+  border-radius: 13px;
+  border-left: 5px solid #218653;
+  box-shadow: 0 3px 15px rgba(30, 80, 50, 0.06);
+}
+
+.stats h3 {
+  font-size: 30px;
+  color: #17683f;
+  margin-bottom: 8px;
+}
+
+.stats p {
+  color: #718078;
+  font-size: 14px;
+}
+
+/* Content cards */
+
+.content-card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 3px 15px rgba(30, 80, 50, 0.06);
+}
+
+.content-card h2 {
+  color: #17683f;
+  margin-bottom: 12px;
+}
+
+.content-card > p {
+  margin-bottom: 15px;
+  color: #718078;
+}
+
+/* Section headings */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0 15px;
+}
+
+.section-heading h2 {
+  color: #17683f;
+}
+
+/* Complaint form */
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 750px;
+  margin-top: 25px;
+}
+
+.complaint-form label {
+  font-weight: 600;
+  color: #385746;
+  margin-top: 5px;
+}
+
+.complaint-form input,
+.complaint-form select,
+.complaint-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d8e5dc;
+  border-radius: 8px;
+  background: #fbfdfb;
+  outline: none;
+}
+
+.complaint-form input:focus,
+.complaint-form select:focus,
+.complaint-form textarea:focus {
+  border-color: #218653;
+}
+
+.complaint-form textarea {
+  resize: vertical;
+}
+
+/* Complaint list */
+
+.complaint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.complaint-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border: 1px solid #e2ebe4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(30, 80, 50, 0.04);
+}
+
+.complaint-item h3 {
+  color: #245d40;
+  margin-bottom: 9px;
+}
+
+.complaint-item p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #63766a;
+  margin-bottom: 7px;
+}
+
+.complaint-item small {
+  color: #89968d;
+}
+
+/* Status badge */
+
+.status {
+  background: #fff2d8;
+  color: #936315;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Notifications */
+
+.notice {
+  background: #e5f4e9;
+  color: #17683f;
+  padding: 13px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+/* Profile */
+
+.content-card p {
+  margin: 15px 0;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 850px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 8px;
+  }
+
+  .sidebar .logout {
+    margin-top: 0;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .complaint-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome {
+    padding: 25px;
+  }
+
+  .main-content {
+    padding: 14px;
+  }
+
+  .content-card {
+    padding: 18px;
+  }
+}
